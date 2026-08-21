@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cd6h0uvma4eyf"]
+
+[ext_resource type="Script" uid="uid://bvt1ftl7tgs4i" path="res://scenes/ui/InventorySlot.gd" id="1_y842j"]
+
+[node name="InventorySlot" type="PanelContainer" unique_id=783423843]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_y842j")
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=659926316]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="VBox" unique_id=2074309591]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBox" unique_id=1889780131]
+layout_mode = 2
+
+[node name="CountLabel" type="Label" parent="VBox" unique_id=1639818179]
+layout_mode = 2
+text = "x1"

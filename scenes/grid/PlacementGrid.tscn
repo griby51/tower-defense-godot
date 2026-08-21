@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://fgkc65n5q5wy"]
+
+[ext_resource type="Script" uid="uid://q6t7yjobd3rc" path="res://scenes/grid/PlacementGrid.gd" id="1_cn6u0"]
+
+[node name="PlacementGrid" type="Node2D" unique_id=1597554274 node_paths=PackedStringArray("buildings_container")]
+script = ExtResource("1_cn6u0")
+buildings_container = NodePath("BuildingsContainer")
+
+[node name="BuildingsContainer" type="Node2D" parent="." unique_id=82370536]

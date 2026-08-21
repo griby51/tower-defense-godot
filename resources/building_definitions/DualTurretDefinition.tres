@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3 uid="uid://biohhdgrc7dvu"]
+
+[ext_resource type="PackedScene" uid="uid://7ukwxm1aam6s" path="res://scenes/buildings/Turret.tscn" id="1_siq71"]
+[ext_resource type="Script" uid="uid://chck0uhi1562e" path="res://resources/building_definitions/BuildingDefinition.gd" id="2_jsr8m"]
+
+[sub_resource type="Gradient" id="Gradient_yg0rd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qkiyq"]
+gradient = SubResource("Gradient_yg0rd")
+
+[resource]
+script = ExtResource("2_jsr8m")
+display_name = "Turret"
+scene = ExtResource("1_siq71")
+icon = SubResource("GradientTexture2D_qkiyq")
+rarity = 1
+metadata/_custom_type_script = "uid://chck0uhi1562e"

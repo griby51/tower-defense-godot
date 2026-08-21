@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://7ukwxm1aam6s"]
+
+[ext_resource type="Script" uid="uid://5oh8ynjfq5cu" path="res://scenes/buildings/TurretBuilding.gd" id="1_kmqkc"]
+[ext_resource type="Texture2D" uid="uid://yxqly1n61c2b" path="res://assets/PNG/Default size/towerDefense_tile180.png" id="3_3myvw"]
+[ext_resource type="Texture2D" uid="uid://bgoxlbynp0nm" path="res://assets/PNG/Default size/towerDefense_tile249.png" id="4_kbrou"]
+[ext_resource type="Texture2D" uid="uid://dcn0fw0i7mpb8" path="res://assets/PNG/Default size/towerDefense_tile295.png" id="4_mfumi"]
+[ext_resource type="Texture2D" uid="uid://bya8vk5otcdah" path="res://assets/PNG/Default size/towerDefense_tile296.png" id="5_e74ck"]
+[ext_resource type="Texture2D" uid="uid://psf18lol86vg" path="res://assets/PNG/Default size/towerDefense_tile297.png" id="6_yu6uv"]
+[ext_resource type="Texture2D" uid="uid://cdfc0cwsu8krk" path="res://assets/PNG/Default size/towerDefense_tile298.png" id="7_hubg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmqkc"]
+size = Vector2(52, 52)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmqkc"]
+radius = 350.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kbrou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mfumi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e74ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yu6uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hubg5")
+}],
+"loop": 0,
+"name": &"fire",
+"speed": 15.0
+}]
+
+[node name="Turret" type="StaticBody2D" unique_id=996268228]
+rotation = -1.5707964
+collision_mask = 0
+script = ExtResource("1_kmqkc")
+attack_range = 350.0
+fire_rate = 0.5
+damage = 20
+rotation_speed_degrees = 60.0
+recoil_return_duration = 0.3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109390080]
+shape = SubResource("RectangleShape2D_kmqkc")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1320377050]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -35.0
+show_percentage = false
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=219981578]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1521380615]
+visible = false
+shape = SubResource("CircleShape2D_kmqkc")
+
+[node name="FireTimer" type="Timer" parent="." unique_id=2087780219]
+
+[node name="Base" type="Sprite2D" parent="." unique_id=891484453]
+texture_filter = 1
+position = Vector2(-4.7683716e-07, 1.9073486e-06)
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("3_3myvw")
+region_rect = Rect2(2443.4116, 907.5531, 105.14844, 104.959595)
+
+[node name="Cannon" type="Node2D" parent="." unique_id=1709977591]
+
+[node name="MuzzlePoint" type="Marker2D" parent="Cannon" unique_id=48009802]
+position = Vector2(27.2, 0)
+
+[node name="MuzzleFlash" type="AnimatedSprite2D" parent="Cannon/MuzzlePoint" unique_id=666992998]
+texture_filter = 1
+position = Vector2(13.799999, 0)
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_kbrou")
+animation = &"fire"
+frame = 3
+frame_progress = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Cannon" unique_id=1795741022]
+texture_filter = 1
+rotation = 1.5707964
+texture = ExtResource("4_kbrou")

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dpkgjmwb3gel3"]
+
+[ext_resource type="Script" uid="uid://dlmu1ubu5q0aj" path="res://scenes/spawner/WaveSpawner.gd" id="1_12n17"]
+[ext_resource type="PackedScene" uid="uid://ciofcovc0fnsc" path="res://scenes/enemies/Enemy.tscn" id="2_n4wo5"]
+
+[node name="WaveSpawner" type="Node2D" unique_id=1391226666]
+script = ExtResource("1_12n17")
+enemy_scenes = Array[PackedScene]([ExtResource("2_n4wo5")])
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1303236181]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1342719975]
+
+[node name="Point1" type="Marker2D" parent="SpawnPoints" unique_id=872432543]
+position = Vector2(115, -166)
+
+[node name="Point2" type="Marker2D" parent="SpawnPoints" unique_id=1750017192]
+position = Vector2(179, -167)
+
+[node name="Point3" type="Marker2D" parent="SpawnPoints" unique_id=62001989]
+position = Vector2(249, -168)
+
+[node name="Point4" type="Marker2D" parent="SpawnPoints" unique_id=2022262085]
+position = Vector2(317, -171)
+
+[node name="Point5" type="Marker2D" parent="SpawnPoints" unique_id=1652353743]
+position = Vector2(381, -167)
+
+[node name="Point6" type="Marker2D" parent="SpawnPoints" unique_id=1068647049]
+position = Vector2(455, -174)
+
+[node name="Point7" type="Marker2D" parent="SpawnPoints" unique_id=49556166]
+position = Vector2(509, -177)
+
+[node name="Point8" type="Marker2D" parent="SpawnPoints" unique_id=628892061]
+position = Vector2(560, -175)
+
+[node name="Point9" type="Marker2D" parent="SpawnPoints" unique_id=1466016362]
+position = Vector2(418, -168)

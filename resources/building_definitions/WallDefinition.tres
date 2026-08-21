@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3 uid="uid://ywhudjy5skhc"]
+
+[ext_resource type="Script" uid="uid://chck0uhi1562e" path="res://resources/building_definitions/BuildingDefinition.gd" id="1_l2pk3"]
+[ext_resource type="PackedScene" uid="uid://bg6tjvrk3e1jq" path="res://scenes/buildings/Wall.tscn" id="1_rrysq"]
+
+[sub_resource type="Gradient" id="Gradient_rfnr7"]
+colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l2pk3"]
+gradient = SubResource("Gradient_rfnr7")
+fill_from = Vector2(0.76521736, 0.7782609)
+
+[resource]
+script = ExtResource("1_l2pk3")
+display_name = "Wall"
+scene = ExtResource("1_rrysq")
+icon = SubResource("GradientTexture2D_l2pk3")
+metadata/_custom_type_script = "uid://chck0uhi1562e"

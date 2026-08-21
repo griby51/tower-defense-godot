@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bup68co82lmo2"]
+
+[ext_resource type="Script" uid="uid://c3he8uwhvawlj" path="res://scenes/ui/ShopOfferCard.gd" id="1_iflra"]
+
+[node name="OfferCard" type="PanelContainer" unique_id=867750217]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_iflra")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1577629598]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=596502093]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Margin/VBox" unique_id=452699854]
+layout_mode = 2
+
+[node name="CostLabel" type="Label" parent="Margin/VBox" unique_id=1526792980]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Margin/VBox" unique_id=366306943]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="Margin/VBox" unique_id=275456741]
+layout_mode = 2

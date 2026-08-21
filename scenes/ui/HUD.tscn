@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c6ig66fr8xw8a"]
+
+[ext_resource type="Script" uid="uid://dghrxsu1qjyld" path="res://scenes/ui/HUD.gd" id="1_kw0id"]
+[ext_resource type="Script" uid="uid://2rf7u5ovu0ee" path="res://scenes/ui/InventoryBar.gd" id="2_atyv1"]
+[ext_resource type="PackedScene" uid="uid://cd6h0uvma4eyf" path="res://scenes/ui/InventorySlot.tscn" id="3_6ll6g"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2014798503]
+script = ExtResource("1_kw0id")
+
+[node name="Root" type="Control" parent="." unique_id=1547919429]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MoneyLabel" type="Label" parent="Root" unique_id=963806161]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="WaveLabel" type="Label" parent="Root" unique_id=1316118659]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 25.0
+
+[node name="SelectedBuildingLabel" type="Label" parent="Root" unique_id=1518701968]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 8.0
+offset_right = 580.0
+offset_bottom = 31.0
+
+[node name="StartWaveButton" type="Button" parent="Root" unique_id=1607799071]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 13.0
+offset_right = 399.0
+offset_bottom = 31.0
+
+[node name="InventoryBar" type="HBoxContainer" parent="Root" unique_id=932684595]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 960.0
+offset_right = 577.0
+offset_bottom = 1077.0
+script = ExtResource("2_atyv1")
+slot_scene = ExtResource("3_6ll6g")
