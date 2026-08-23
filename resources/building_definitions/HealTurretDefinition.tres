@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3 uid="uid://b3ra2war7vppm"]
+
+[ext_resource type="Script" uid="uid://chck0uhi1562e" path="res://resources/building_definitions/BuildingDefinition.gd" id="1_afu5t"]
+[ext_resource type="PackedScene" uid="uid://br7upukd4gq4w" path="res://scenes/buildings/HealTurret.tscn" id="1_aglju"]
+[ext_resource type="Texture2D" uid="uid://ipqce1kp0ib1" path="res://assets/PNG/Default size/towerDefense_tile001.png" id="1_evbvk"]
+
+[resource]
+script = ExtResource("1_afu5t")
+display_name = "Heal Turret"
+scene = ExtResource("1_aglju")
+icon = ExtResource("1_evbvk")
+rarity = 3
+metadata/_custom_type_script = "uid://chck0uhi1562e"

@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://cqot43dcfrf1e" path="res://scenes/ui/ShopPanel.gd" id="1_1rqtx"]
 [ext_resource type="PackedScene" uid="uid://bup68co82lmo2" path="res://scenes/ui/ShopOfferCard.tscn" id="1_a0ju1"]
 [ext_resource type="Script" uid="uid://chck0uhi1562e" path="res://resources/building_definitions/BuildingDefinition.gd" id="2_w3a5j"]
-[ext_resource type="Resource" uid="uid://dc5ilf8ejw511" path="res://resources/building_definitions/TurretDefinition.tres" id="3_3i5q7"]
+[ext_resource type="Resource" uid="uid://dc5ilf8ejw511" path="res://resources/building_definitions/DualTurretDefinition.tres" id="3_3i5q7"]
 [ext_resource type="Resource" uid="uid://ywhudjy5skhc" path="res://resources/building_definitions/WallDefinition.tres" id="4_l46et"]
+[ext_resource type="Resource" uid="uid://biohhdgrc7dvu" path="res://resources/building_definitions/TurretDefintion.tres" id="5_3i5q7"]
+[ext_resource type="Resource" uid="uid://c1bxtxwq6prql" path="res://resources/building_definitions/ShotgunTurretDefinition.tres" id="6_5xi83"]
+[ext_resource type="Resource" uid="uid://b3ra2war7vppm" path="res://resources/building_definitions/HealTurretDefinition.tres" id="7_oc3vl"]
 
 [node name="ShopPanel" type="CanvasLayer" unique_id=1754757148]
 script = ExtResource("1_1rqtx")
-building_catalog = Array[ExtResource("2_w3a5j")]([ExtResource("3_3i5q7"), ExtResource("4_l46et")])
+building_catalog = Array[ExtResource("2_w3a5j")]([ExtResource("3_3i5q7"), ExtResource("4_l46et"), ExtResource("5_3i5q7"), ExtResource("6_5xi83"), ExtResource("7_oc3vl")])
 offer_card_scene = ExtResource("1_a0ju1")
 
 [node name="PanelRoot" type="Control" parent="." unique_id=2067988281]

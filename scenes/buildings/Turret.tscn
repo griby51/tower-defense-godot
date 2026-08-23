@@ -86,6 +86,6 @@ frame = 3
 frame_progress = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Cannon" unique_id=1795741022]
-texture_filter = 1
+texture_filter = 2
 rotation = 1.5707964
 texture = ExtResource("4_kbrou")

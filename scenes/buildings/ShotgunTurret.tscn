@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cw8blbugc2s54"]
+
+[ext_resource type="Script" uid="uid://5713b31epgtl" path="res://scenes/buildings/ShotgunTurretBuilding.gd" id="1_uv3f2"]
+[ext_resource type="Texture2D" uid="uid://yxqly1n61c2b" path="res://assets/PNG/Default size/towerDefense_tile180.png" id="2_1y223"]
+[ext_resource type="PackedScene" uid="uid://jbomwvxklpp2" path="res://scenes/projectiles/Projectile.tscn" id="2_gjnoi"]
+[ext_resource type="Texture2D" uid="uid://b7on6ep15s4iq" path="res://assets/PNG/Default size/towerDefense_tile229.png" id="4_gjnoi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmqkc"]
+size = Vector2(52, 52)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmqkc"]
+radius = 350.0
+
+[node name="ShotgunTurret" type="StaticBody2D" unique_id=996268228]
+rotation = -1.5707964
+collision_mask = 0
+script = ExtResource("1_uv3f2")
+projectile_scene = ExtResource("2_gjnoi")
+recoil_return_duration = 0.3
+fire_rate = 0.3
+rotation_speed_degrees = 70.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109390080]
+shape = SubResource("RectangleShape2D_kmqkc")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1320377050]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -35.0
+show_percentage = false
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=219981578]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1521380615]
+visible = false
+shape = SubResource("CircleShape2D_kmqkc")
+
+[node name="FireTimer" type="Timer" parent="." unique_id=2087780219]
+
+[node name="Base" type="Sprite2D" parent="." unique_id=891484453]
+texture_filter = 1
+position = Vector2(-4.7683716e-07, 1.9073486e-06)
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("2_1y223")
+region_rect = Rect2(2443.4116, 907.5531, 105.14844, 104.959595)
+
+[node name="Cannon" type="Node2D" parent="." unique_id=1709977591]
+
+[node name="MuzzlePoint" type="Marker2D" parent="Cannon" unique_id=48009802]
+position = Vector2(19, 8.3051634e-07)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cannon" unique_id=1795741022]
+texture_filter = 2
+rotation = 1.5707964
+texture = ExtResource("4_gjnoi")

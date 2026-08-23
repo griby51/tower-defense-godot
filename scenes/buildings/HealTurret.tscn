@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://br7upukd4gq4w"]
+
+[ext_resource type="Script" uid="uid://bosfv0bc84ptb" path="res://scenes/buildings/HealTurretBuiiding.gd" id="1_1som7"]
+[ext_resource type="PackedScene" uid="uid://bcwumgcle3hqe" path="res://scenes/projectiles/HealProjectile.tscn" id="2_p7t42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1som7"]
+size = Vector2(64, 64)
+
+[node name="HealTurret" type="StaticBody2D" unique_id=996268228]
+collision_mask = 0
+script = ExtResource("1_1som7")
+heal_projectile_scene = ExtResource("2_p7t42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109390080]
+shape = SubResource("RectangleShape2D_1som7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1567575257]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0, 0.4862745, 0, 1)
+
+[node name="FireTimer" type="Timer" parent="." unique_id=881193473]

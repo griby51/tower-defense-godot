@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bcwumgcle3hqe"]
+
+[ext_resource type="Script" uid="uid://b5jypbl0we315" path="res://scenes/projectiles/HealProjectile.gd" id="1_by3aq"]
+
+[node name="HealProjectile" type="Node2D" unique_id=1886935837]
+script = ExtResource("1_by3aq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1419065681]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+color = Color(0, 1, 0.4392157, 1)

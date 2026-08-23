@@ -40,10 +40,10 @@ collision_mask = 0
 script = ExtResource("1_bv16e")
 recoil_distance = 6.0
 recoil_out_duration = 0.05
-recoil_return_duration = 0.3
+recoil_return_duration = 0.1
 attack_range = 350.0
-fire_rate = 0.5
-damage = 20
+fire_rate = 5.0
+damage = 5
 rotation_speed_degrees = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109390080]
@@ -102,6 +102,6 @@ frame_progress = 1.0
 speed_scale = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Cannon" unique_id=1795741022]
-texture_filter = 1
+texture_filter = 2
 rotation = 1.5707964
 texture = ExtResource("7_bv16e")

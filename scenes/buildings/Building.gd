@@ -48,6 +48,16 @@ func take_damage(amount: int) -> void:
 	if current_health == 0:
 		die()
 
+## Soigne le bâtiment (utilisé par HealTurretBuilding via HealProjectile).
+## N'a aucun effet sur un bâtiment détruit ou déjà à pleine vie.
+func heal(amount: int) -> void:
+	if current_health <= 0 or current_health >= max_health:
+		return
+	current_health = mini(max_health, current_health + amount)
+	health_changed.emit(current_health, max_health)
+	if _health_bar:
+		_health_bar.value = current_health
+
 func die() -> void:
 	destroyed.emit(self)
 	queue_free()

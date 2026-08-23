@@ -25,6 +25,8 @@ class_name DualCannonTurretBuilding
 var _flash_base_rotations: Array[float] = []
 var _cannon_rest_position: Vector2 = Vector2.ZERO
 var _recoil_tween: Tween = null
+## Index (0 ou 1) du point de flamme qui tirera au prochain déclenchement.
+var _next_flash_index: int = 0
 
 func _ready() -> void:
 	super._ready()
@@ -42,8 +44,8 @@ func _on_muzzle_flash_finished(flash: AnimatedSprite2D) -> void:
 
 func _fire_at(target: Node2D) -> void:
 	super._fire_at(target)
-	for i in _muzzle_flashes.size():
-		_play_muzzle_flash(i)
+	_play_muzzle_flash(_next_flash_index)
+	_next_flash_index = (_next_flash_index + 1) % _muzzle_flashes.size()
 	_play_recoil()
 
 func _play_muzzle_flash(index: int) -> void:
